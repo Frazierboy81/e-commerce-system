@@ -24,11 +24,12 @@
     }
 
     getPriceWithDiscount(): number | string {
-        if (this.price >= 100) {
+        if (this.discountPercentage > 0) {
             const disc = this.price * (this.discountPercentage);
-            return `The discount amount is: $${disc}`;
+            const priceWithDiscount = this.price - (disc)
+            return `The discounted amount is: $${priceWithDiscount}`;
         } else {
-            return this.price;
+            return `The price is: $${this.price}`
         }
     }
 
