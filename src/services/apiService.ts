@@ -2,9 +2,7 @@ import { handleAPIError, APIError } from "../utils/errorHandler";
 
 const BASE_URL ='https://dummyjson.com';
 
-/**
- * GET all products, default 30
- */
+
 export async function getProducts(limit: number = 20) {
     try {
         // send request
